@@ -1,0 +1,72 @@
+1)Ans:-
+
+from tkinter import *
+
+root =Tk()
+
+def action():
+    root.destroy()
+
+label1=Label(root,text='Hello world')
+label1.pack()
+button = Button(root, text="Exit", command = action)
+button.pack()
+root.mainloop()
+
+
+2)Ans:-
+
+from tkinter import *
+
+root =Tk()
+
+
+def action():
+    label1=Label(root,text='welcome to GUI')
+    label1.pack()
+
+button = Button(root,text="Display",command= action)
+button.pack()
+root.mainloop()
+
+3)Ans:-
+
+from tkinter import *
+
+def fun1():
+    label1.configure(text='Stupid why did you click')
+
+def fun2():
+    root.destroy()
+
+
+root = Tk()
+frame = Frame(root)
+frame.pack()
+label1 =Label(frame, text='write n display your text')
+label1.pack()
+b1=Button(frame,text="click me",command=fun1)
+b1.pack()
+b2=Button(frame,text=' I am Destructor',command=fun2)
+b2.pack()
+root.mainloop()
+
+4)Ans:-
+
+from tkinter import *
+
+
+def Display():
+    string = e.get()
+    e.focus_set()
+    print(string)
+
+
+root =Tk()
+e =Entry(root)
+e.pack()
+
+
+b = Button(root,text='Write something',command=Display)
+b.pack(side='bottom')
+root.mainloop()
